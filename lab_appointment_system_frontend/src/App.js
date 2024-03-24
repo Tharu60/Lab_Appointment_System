@@ -31,11 +31,13 @@ import UpdateTest from "./pages/Tests/updateTest"
 import AddReports from "./pages/Reports/addReports"
 import UpdateReports from "./pages/Reports/reportUpdate"
 import ReportTable from "./pages/Reports/table"
+import Sidebar from './Components/Sidebar/sideBar'
 
 
 function App() {
   return (
     <div className="App">
+      <Sidebar />
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
