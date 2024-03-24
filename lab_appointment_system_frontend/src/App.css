@@ -1,0 +1,11 @@
+.container{
+  margin-left: 90px !important;
+  width: 1200px;
+  transition: all .5s ease;
+}
+
+.container.open{
+  width: 800px;
+  margin-left: 220px !important;
+  transition: all .5s ease; 
+}
