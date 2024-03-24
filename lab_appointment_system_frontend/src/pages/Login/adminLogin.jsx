@@ -1,8 +1,11 @@
 import React from 'react'
+import AdminLogin from '../../Components/Login/AdminLogin'
 
 const adminLogin = () => {
   return (
-    <div>adminLogin</div>
+    <>
+      <AdminLogin />
+    </>
   )
 }
 

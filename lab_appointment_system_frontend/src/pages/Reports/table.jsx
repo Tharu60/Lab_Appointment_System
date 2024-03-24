@@ -3,7 +3,9 @@ import AddReports from '../../Components/Forms/addReports/addReports'
 
 const table = () => {
   return (
-    <div>table</div>
+    <>
+      <AddReports />
+    </>
   )
 }
 

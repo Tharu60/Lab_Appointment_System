@@ -1,13 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
 
-
-const Login = () => {
+const ReceptionistLogin = () => {
   return (
     <div className='login template d-flex justify-content-center align-items-center 100-w vh-100 bg-primary'>
       <div className='50-w p-5 rounded bg-white'>
       <form>
-        <h3 className='text-center'>Login</h3>
+        <h3 className='text-center'>Receptionist Login</h3>
         <div className='md-2'>
           <label htmlFor="email">Email</label>
           <input type='email' placeholder='Enater Email' className='form-control'/>
@@ -20,13 +18,13 @@ const Login = () => {
           <button className='btn btn-primary'>Sign in</button> 
         </div>
         <p>
-          Forgot <a href="">Password</a> <Link to="/patient/addPatient">Register</Link>
+          Forgot <a href="">Password</a> <a href="">Register</a>
         </p>
-        <p>I am <a href="">Patient</a> <a href="">Technician</a> <a href="">Receptionist</a></p>
+        <p>I am <a href="">Admin</a> <a href="">Technician</a> <a href="">Patient</a></p>
       </form>
       </div>
     </div>
   )
 }
 
-export default Login
+export default ReceptionistLogin

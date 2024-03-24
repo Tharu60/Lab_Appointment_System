@@ -3,6 +3,9 @@ import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login/login";
+import AdminLogin from "./pages/Login/adminLogin";
+import ReceptionistLogin from "./pages/Login/receptionistLogin";
+import TechnicianLogin from "./pages/Login/technicianLogin";
 import ForgotPassword from "./pages/ForgotPassword/forgotPassword";
 import AdminRegister from "./pages/Register/adminRegister"
 import AdminTable from "./pages/Admin/table"
@@ -36,6 +39,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/adminLogin" element={<AdminLogin />} />
+          <Route path="/receptionistLogin" element={<ReceptionistLogin />} />
+          <Route path="/technicianLogin" element={<TechnicianLogin />} />
           <Route path="/forgotPassword" element={<ForgotPassword />} />
           <Route path="/adminRegister" element={<AdminRegister />} />
           <Route path="/admins" element={<AdminTable />} />
