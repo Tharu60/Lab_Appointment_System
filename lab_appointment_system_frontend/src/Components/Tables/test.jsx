@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const test = () => {
   return (
@@ -10,6 +11,7 @@ const test = () => {
               <th scope="col">#</th>
               <th scope="col">Test Name</th>
               <th scope="col">Discription</th>
+              <th scope="col">Price</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -20,6 +22,9 @@ const test = () => {
               </th>
               <td>Test</td>
               <td>Test</td>
+              <td>Test</td>
+              <td><Link class="btn btn-outline-primary m-1" to="/test/updateTest" >Update</Link>
+                <Link class="btn btn-outline-primary" >Delete</Link></td>
             </tr>
           </tbody>
         </table>

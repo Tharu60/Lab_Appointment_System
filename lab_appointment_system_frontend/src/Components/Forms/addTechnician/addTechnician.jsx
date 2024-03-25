@@ -14,7 +14,7 @@ const addTechnician = () => {
             <input
               type={"text"}
               className="form-control"
-              placeholder="Enter Your Name"
+              placeholder="Enter Name"
               name="name"
             />
           </div>
@@ -26,7 +26,7 @@ const addTechnician = () => {
             <input
               type={"text"}
               className="form-control"
-              placeholder="Enter Your E-mail Address"
+              placeholder="Enter E-mail Address"
               name="email"
             />
           </div>
@@ -38,7 +38,7 @@ const addTechnician = () => {
             <input
               type={"password"}
               className="form-control"
-              placeholder="Enter Your Password"
+              placeholder="Enter Password"
               name="email"
             />
           </div>
@@ -50,7 +50,7 @@ const addTechnician = () => {
             <input
               type={"text"}
               className="form-control"
-              placeholder="Enter Your Contact Number"
+              placeholder="Enter Contact Number"
               name="mobileNumber"
             />
           </div>

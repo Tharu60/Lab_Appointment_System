@@ -1,8 +1,11 @@
 import React from 'react'
+import UpdatePatient from '../../Components/Forms/addPatient/updatePatient'
 
 const updatePatient = () => {
   return (
-    <div>updatePatient</div>
+    <>
+      <UpdatePatient />
+    </>
   )
 }
 

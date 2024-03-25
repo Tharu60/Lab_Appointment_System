@@ -1,5 +1,5 @@
 import React from 'react'
-import AddReports from '../../Components/Forms/addReports/addReports'
+import AddReports from '../../Components/Tables/reports'
 
 const table = () => {
   return (

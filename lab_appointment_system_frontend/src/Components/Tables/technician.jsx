@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const technician = () => {
   return (
@@ -32,6 +33,8 @@ const technician = () => {
               <td>Test</td>
               <td>Test</td>
               <td>Test</td>
+              <td><Link class="btn btn-outline-primary m-1" to="/technician/updateTechnician" >Update</Link>
+                <Link class="btn btn-outline-primary" >Delete</Link></td>
             </tr>
           </tbody>
         </table>
