@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const payment = () => {
   return (
@@ -9,12 +10,9 @@ const payment = () => {
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">First Name</th>
-              <th scope="col">Last Name</th>
-              <th scope="col">Test Name</th>
-              <th scope="col">Appoiment</th>
+              <th scope="col">Name</th>
               <th scope="col">Amount</th>
-              <th scope="col">Status</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -24,9 +22,8 @@ const payment = () => {
               </th>
               <td>Test</td>
               <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
+              <td><Link class="btn btn-outline-primary m-1" to="" >Refund</Link>
+                <Link class="btn btn-outline-primary" >Delete</Link></td>
             </tr>
           </tbody>
         </table>

@@ -99,7 +99,7 @@ const adminDashbord = () => {
                 <Link  to="/report/addReport" class="btn btn-primary m-2"><i class="bi bi-file-ruled"></i> Add Reports</Link>
                 <Link  to="/report" class="btn btn-success m-2"><i class="bi bi-file-text"></i> View All Reports</Link>
                 <br />
-                <Link  to="/report/updateReport" class="btn btn-info m-2"><i class="bi bi-database-up"></i> Update Reports</Link>
+                <Link  to="/report" class="btn btn-info m-2"><i class="bi bi-database-up"></i> Update Reports</Link>
                 <Link  to="/report" class="btn btn-outline-danger m-2"><i class="bi bi-file-earmark-x"></i> Remove Reports</Link>
               </div>
             </div>
@@ -117,7 +117,7 @@ const adminDashbord = () => {
                 <Link  to="/adminRegister" class="btn btn-primary m-2"><i class="bi bi-person-add"></i> Add Admin</Link>
                 <Link  to="/admins" class="btn btn-success m-2"><i class="bi bi-person-check"></i> View All Admin</Link>
                 <br />
-                <Link  to="/adminUpdate" class="btn btn-info m-2"><i class="bi bi-person-gear"></i> Update Admin</Link>
+                <Link  to="/admins" class="btn btn-info m-2"><i class="bi bi-person-gear"></i> Update Admin</Link>
                 <Link  to="/admins" class="btn btn-outline-danger m-2"><i class="bi bi-person-x"></i> Remove Admin</Link>
               </div>
             </div>

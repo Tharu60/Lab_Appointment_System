@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const admin = () => {
   return (
@@ -8,8 +9,7 @@ const admin = () => {
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
+            <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Mobile</th>
             <th scope="col">Address</th>
@@ -31,7 +31,8 @@ const admin = () => {
             <td>Test</td>
             <td>Test</td>
             <td>Test</td>
-            <td>Test</td>
+            <td><Link class="btn btn-outline-primary m-1" to="/adminUpdate" >Update</Link>
+                <Link class="btn btn-outline-primary" >Delete</Link></td>
           </tr>
         </tbody>
       </table>
