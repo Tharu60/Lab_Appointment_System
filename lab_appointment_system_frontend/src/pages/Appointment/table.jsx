@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const table = () => {
   return (
     <div className="container">
-      <h2>Payments</h2>
+      <h2>Appointments</h2>
       <div className="py-4">
         <table className="table border shadow">
           <thead>

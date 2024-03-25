@@ -17,9 +17,7 @@ const payment = () => {
           </thead>
           <tbody>
             <tr>
-              <th>
-                01
-              </th>
+            <th scope='row'>1</th>
               <td>Test</td>
               <td>Test</td>
               <td><Link class="btn btn-outline-primary m-1" to="" >Refund</Link>

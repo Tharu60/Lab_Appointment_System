@@ -1,7 +1,19 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-const receptionist = () => {
+const Receptionist = () => {
+  const [receptionistUsers, setReceptionistUsers] = useState([]);
+
+  useEffect(() => {
+    loadReceptionistUsers();
+  }, []);
+
+  const loadReceptionistUsers = async () => {
+    const result = await axios.get("http://localhost:8080/receptionist");
+    setReceptionistUsers(result.data);
+  }
+
   return (
     <div className="container">
       <div className="py-4">
@@ -12,29 +24,22 @@ const receptionist = () => {
               <th scope="col">Name</th>
               <th scope="col">Email</th>
               <th scope="col">Mobile</th>
-              <th scope="col">Address</th>
-              <th scope="col">Street</th>
-              <th scope="col">City</th>
-              <th scope="col">Gender</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th>
-                01
-              </th>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td><Link class="btn btn-outline-primary m-1" to="/receptionist/updateReceptionist" >Update</Link>
+          {
+              receptionistUsers.map((receptionistUsers, index) => (
+                <tr>
+                  <th scope='row' key={index}>{index+1}</th>
+                  <td>{receptionistUsers.name}</td>
+                  <td>{receptionistUsers.email}</td>
+                  <td>{receptionistUsers.m_number}</td>
+                  <td><Link class="btn btn-outline-primary m-1" to="/receptionist/updateReceptionist" >Update</Link>
                 <Link class="btn btn-outline-primary" >Delete</Link></td>
-            </tr>
+                </tr>
+              ))
+            }
           </tbody>
         </table>
       </div>
@@ -42,4 +47,4 @@ const receptionist = () => {
   )
 }
 
-export default receptionist
+export default Receptionist

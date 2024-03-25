@@ -17,9 +17,7 @@ const test = () => {
           </thead>
           <tbody>
             <tr>
-              <th>
-                01
-              </th>
+            <th scope='row'>1</th>
               <td>Test</td>
               <td>Test</td>
               <td>Test</td>

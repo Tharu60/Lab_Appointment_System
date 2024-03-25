@@ -3,14 +3,12 @@ package com.LabAppointmentSystem.Lab_Appointment_System.controller;
 import com.LabAppointmentSystem.Lab_Appointment_System.model.ReceptionistUser;
 import com.LabAppointmentSystem.Lab_Appointment_System.repository.ReceptionistUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin("http://localhost:3000")
 public class ReceptionistUserController {
 
     @Autowired
