@@ -10,6 +10,7 @@ const payment = () => {
           <thead>
             <tr>
               <th scope="col">#</th>
+              <th scope="col">Payment ID</th>
               <th scope="col">Name</th>
               <th scope="col">Amount</th>
               <th scope="col">Action</th>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const payment = () => {
   return (
@@ -12,10 +13,6 @@ const payment = () => {
           <blockquote class="blockquote mb-0">
             <h5>Test</h5>
             <label>Test name</label>
-            <br />
-            <br />
-            <h5>Date and Time</h5>
-            <label> Test Date and time</label>
             <br />
             <br />
             <p className='text-danger'>Please report to the laboratory 10 minutes before the appoiment time</p>
@@ -33,9 +30,9 @@ const payment = () => {
           <button type="submit" className="btn btn-primary">
             Pay Now
           </button>
-          <button className="btn btn-outline-danger mx-2" to="/">
+          <Link className="btn btn-outline-danger mx-2" to="/adminDashbord">
             Cancel
-          </button>
+          </Link>
           </div>
     </div>
   )

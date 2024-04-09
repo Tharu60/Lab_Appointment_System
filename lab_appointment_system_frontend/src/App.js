@@ -62,13 +62,13 @@ function AppContent() {
         <Route path="/forgotPassword" element={<ForgotPassword />} />
         <Route path="/adminRegister" element={<AdminRegister />} />
         <Route path="/admins" element={<AdminTable />} />
-        <Route path="/adminUpdate" element={<AdminUpdate />} />
+        <Route path="/adminUpdate/:id" element={<AdminUpdate />} />
         <Route path="/appointment/newAppointment" element={<MakeAppointment />} />
         <Route path="/appointment" element={<AppointmentTable />} />
         <Route path="/appointment/rescheduleAppointment" element={<UpdateAppointment />} />
         <Route path="/patient/addPatient" element={<AddPatient />} />
         <Route path="/patient" element={<PatientTable />} />
-        <Route path="/patient/updatePatient" element={<UpdatePatient />} />
+        <Route path="/patient/updatePatient/:id" element={<UpdatePatient />} />
         <Route path="/receptionist/addReceptionist" element={<AddReceptionist />} />
         <Route path="/receptionist" element={<ReceptionistTable />} />
         <Route path="/receptionist/updateReceptionist" element={<UpdateReceptionist />} />

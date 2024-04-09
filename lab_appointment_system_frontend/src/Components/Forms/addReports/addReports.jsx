@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const addReports = () => {
 
@@ -35,9 +36,9 @@ const addReports = () => {
           <button type="submit" className="btn btn-primary">
             Upload Report
           </button>
-          <button className="btn btn-outline-danger mx-2" to="/">
+          <Link className="btn btn-outline-danger mx-2" to="/adminDashbord">
             Cancel
-          </button>
+          </Link>
           </div>
 
         </form>

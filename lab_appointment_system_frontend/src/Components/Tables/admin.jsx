@@ -22,11 +22,6 @@ const Admin = () => {
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
-            <th scope="col">Mobile</th>
-            <th scope="col">Address</th>
-            <th scope="col">Street</th>
-            <th scope="col">City</th>
-            <th scope="col">Gender</th>
             <th scope="col">Action</th>
           </tr>
         </thead>
@@ -37,12 +32,7 @@ const Admin = () => {
                   <th scope='row' key={index}>{index+1}</th>
                   <td>{adminUsers.name}</td>
                   <td>{adminUsers.email}</td>
-                  <td>{adminUsers.m_number}</td>
-                  <td>{adminUsers.address_l1}</td>
-                  <td>{adminUsers.address_l2}</td>
-                  <td>{adminUsers.address_l3}</td>
-                  <td>{adminUsers.gender}</td>
-                  <td><Link class="btn btn-outline-primary m-1" to="/adminUpdate" >Update</Link>
+                  <td><Link class="btn btn-outline-primary m-1" to={`/admin/updateAdmin/${adminUsers.id}`} >Update</Link>
                 <Link class="btn btn-outline-primary" >Delete</Link></td>
                 </tr>
               ))

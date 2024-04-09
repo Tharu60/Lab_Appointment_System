@@ -1,7 +1,18 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-const table = () => {
+const Table = () => {
+  const [appointments, setAppointments] = useState([]);
+
+  useEffect(() => {
+    loadAppointments();
+  }, []);
+
+  const loadAppointments = async () => {
+    const result = await axios.get("http://localhost:8080/appointment");
+    setAppointments(result.data);
+  }
   return (
     <div className="container">
       <h2>Appointments</h2>
@@ -16,15 +27,17 @@ const table = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th>
-                01
-              </th>
-              <td>Test</td>
-              <td>Test</td>
-              <td><Link class="btn btn-outline-primary m-1" to="/appointment/rescheduleAppointment" >Rscheduled</Link>
-                <Link class="btn btn-outline-primary" >Delete</Link></td>
-            </tr>
+          {
+              appointments.map((appointments, index) => (
+                <tr>
+                  <th scope='row' key={index}>{index+1}</th>
+                  <td>{appointments.testName}</td>
+                  <td>{appointments.dateTime}</td>
+                  <td><Link class="btn btn-outline-primary m-1" to="/patient/updatePatient" >Update</Link>
+                    <Link class="btn btn-outline-primary" >Delete</Link></td>
+                </tr>
+              ))
+            }
           </tbody>
         </table>
       </div>
@@ -32,4 +45,4 @@ const table = () => {
   )
 }
 
-export default table
+export default Table

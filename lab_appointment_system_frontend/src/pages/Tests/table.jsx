@@ -1,5 +1,5 @@
 import React from 'react'
-import TestTable from '../../Components/Tables/test'
+import TestTable from '../../Components/Tables/viewTest'
 
 const table = () => {
   return (

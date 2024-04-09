@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
 const Patient = () => {
   const [patientUsers, setPatientUsers] = useState([]);
+
+  const {id}=useParams()
 
   useEffect(() => {
     loadPatientUsers();
@@ -13,6 +15,11 @@ const Patient = () => {
   const loadPatientUsers = async () => {
     const result = await axios.get("http://localhost:8080/patient");
     setPatientUsers(result.data);
+  }
+
+  const deletePatientUsers = async (id)=>{
+    await axios.delete(`http://localhost:8080/patients/${id}`)
+    loadPatientUsers()
   }
 
   return (
@@ -45,8 +52,8 @@ const Patient = () => {
                   <td>{patientUser.address_l2}</td>
                   <td>{patientUser.address_l3}</td>
                   <td>{patientUser.gender}</td>
-                  <td><Link class="btn btn-outline-primary m-1" to="/patient/updatePatient" >Update</Link>
-                    <Link class="btn btn-outline-primary" >Delete</Link></td>
+                  <td><Link class="btn btn-outline-primary m-1" to={`/patient/updatePatient/${patientUser.id}`}>Update</Link>
+                    <Link class="btn btn-outline-primary" onClick={()=>deletePatientUsers(patientUser.id)}>Delete</Link></td>
                 </tr>
               ))
             }

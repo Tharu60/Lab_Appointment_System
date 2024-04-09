@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const updateTest = () => {
   return (
@@ -47,9 +48,9 @@ const updateTest = () => {
           <button type="submit" className="btn btn-primary">
             Update Test
           </button>
-          <button className="btn btn-outline-danger mx-2" to="/">
+          <Link className="btn btn-outline-danger mx-2" to="/adminDashbord">
             Cancel
-          </button>
+          </Link>
           </div>
 
         </form>

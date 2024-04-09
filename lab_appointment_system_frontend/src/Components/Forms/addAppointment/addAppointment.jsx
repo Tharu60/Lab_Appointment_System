@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
+import { Link } from "react-router-dom";
 
 const AddAppointment = () => {
   const [selectDate, setSelectedDate] = useState(null);
@@ -14,7 +15,7 @@ const AddAppointment = () => {
     <div className="container">
     <div className="row">
       <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-        <h2 className="text-center m-4">Rscheduled Appointment</h2>
+        <h2 className="text-center m-4">Make New Appointment</h2>
         <form>
           <div className="mb-3">
             <label htmlFor="Name" className="form-lable">
@@ -46,9 +47,9 @@ const AddAppointment = () => {
           <button type="submit" className="btn btn-primary">
             Confirm Booking
           </button>
-          <button className="btn btn-outline-danger mx-2" to="/">
+          <Link className="btn btn-outline-danger mx-2" to="/adminDashbord">
             Cancel
-          </button>
+          </Link>
           </div>
 
         </form>

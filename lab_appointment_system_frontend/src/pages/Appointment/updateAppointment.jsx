@@ -14,7 +14,7 @@ const UpdateAppointment = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow">
-          <h2 className="text-center m-4">Make New Appointment</h2>
+          <h2 className="text-center m-4">Appointment Reschedul</h2>
           <form>
             <div className="mb-3">
               <label htmlFor="Name" className="form-lable">
@@ -44,7 +44,7 @@ const UpdateAppointment = () => {
 
             <div className='text-center'>
               <button type="submit" className="btn btn-primary">
-                Confirm Booking
+              Reschedul Booking
               </button>
               <button className="btn btn-outline-danger mx-2" to="/">
                 Cancel

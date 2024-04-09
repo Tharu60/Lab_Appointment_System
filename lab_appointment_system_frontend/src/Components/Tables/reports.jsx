@@ -9,6 +9,7 @@ const reports = () => {
           <thead>
             <tr>
               <th scope="col">#</th>
+              <th scope="col">Test ID</th>
               <th scope="col">Test Name</th>
               <th scope="col">Result</th>
               <th scope="col">Action</th>

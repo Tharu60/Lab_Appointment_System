@@ -5,6 +5,14 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Test {
+
+    @Id
+    @GeneratedValue
+    private Long Id;
+    private String name;
+    private String description;
+    private Long price;
+
     public Long getId() {
         return Id;
     }
@@ -36,12 +44,5 @@ public class Test {
     public void setPrice(Long price) {
         this.price = price;
     }
-
-    @Id
-    @GeneratedValue
-    private Long Id;
-    private String name;
-    private String description;
-    private Long price;
 
 }
